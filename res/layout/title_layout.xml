@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#339EF0"
+    android:paddingLeft="10dp" 
+    android:paddingRight="10dp" >
+    <TextView 
+        android:id="@+id/backButtonId"
+        android:text="返回"
+        android:layout_width="wrap_content"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="#FFFFFF"/>
+    <TextView 
+        android:id="@+id/titleTextId"
+        android:text="欢迎使用"
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="10dp"/>
+    <TextView 
+        android:id="@+id/switchButtonId"
+        android:layout_centerVertical="true"
+        android:text="注销登入"
+        android:layout_width="wrap_content"
+        android:textSize="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>

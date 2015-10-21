@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <wang.tools.TitleLayout
+        android:id="@+id/titleId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        ></wang.tools.TitleLayout>
+<Spinner 
+    android:id="@+id/managerseeSpinner1Id"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_below="@id/titleId"
+    android:layout_marginLeft="10dp"
+    />
+<TextView 
+    android:id="@+id/refreshButton1Id"
+    android:textSize="20sp"
+    android:layout_width="60dp"
+    android:layout_height="30dp"
+    android:text="刷新"
+    android:gravity="center"
+    android:background="#EBCAF2"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="20dp"
+    android:layout_below="@id/managerseeSpinner1Id"
+    />
+<ListView 
+    	android:id="@+id/managerseeListView1Id"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_alignParentBottom="true"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:layout_marginTop="50dp"
+    	android:layout_below="@id/managerseeSpinner1Id"
+    	android:layout_marginBottom="50dp"
+    ></ListView>
+
+<Button
+    android:id="@+id/rejectedUserId"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="已拒绝用户"
+    android:textSize="15sp" 
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignRight="@id/managerseeListView1Id"/>
+
+</RelativeLayout>

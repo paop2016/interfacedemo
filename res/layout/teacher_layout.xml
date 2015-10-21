@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED" >
+
+	<wang.tools.TitleLayout
+        android:id="@+id/titleId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></wang.tools.TitleLayout>
+    <LinearLayout 
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/titleId"
+        android:orientation="horizontal"
+        android:id="@+id/thirdId"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <ImageView 
+            android:src="@drawable/fangdajing"
+            android:scaleType="fitXY"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            />
+        <EditText 
+            android:id="@+id/inputId"
+            android:layout_gravity="center"
+            android:hint="按 姓名/学号 /身份证 搜索"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+			
+        <Button 
+            android:id="@+id/sousuoId"
+            android:text="搜索"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="30sp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="50dp"
+			android:layout_marginLeft="30dp"
+			android:layout_marginRight="30dp"
+            android:background="#6B7CD1"
+            android:layout_below="@id/thirdId"/>
+        <Button 
+            android:id="@+id/dasousuoId"
+            android:text="全部学生列表"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="30sp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="70dp"
+			android:layout_marginLeft="30dp"
+			android:layout_marginRight="30dp"
+            android:background="#6B7CD1"
+            android:layout_below="@id/sousuoId"/>
+</RelativeLayout>

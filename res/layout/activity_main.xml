@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#EDEDED">
+
+<ImageView 
+    android:id="@+id/imageId"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:src="@drawable/main"
+    android:scaleType="fitXY"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp"
+    />
+<LinearLayout 
+    android:id="@+id/firstId"
+    android:layout_below="@id/imageId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/a"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/zhanghaoId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="账号"
+        android:focusable="true"
+        android:layout_marginRight="20dp"
+        android:maxLines="1"
+        />
+</LinearLayout>
+
+<LinearLayout 
+    android:id="@+id/secondId"
+    android:layout_below="@id/firstId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/b"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/mimaId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="密码"
+        android:password="true"
+        android:layout_marginRight="20dp"
+        android:maxLines="1"/>
+</LinearLayout>
+
+<TextView
+    android:id="@+id/changeButtonId"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="修改密码"
+    android:layout_marginRight="20dp"
+    android:textSize="15sp" 
+    android:layout_below="@id/secondId"
+    android:layout_alignParentRight="true"
+    />
+	
+<Button 
+    android:id="@+id/xdengrubuttonId"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:textSize="20sp"
+    android:text="登入"
+    android:layout_below="@id/changeButtonId"
+    android:layout_marginTop="20dp"
+    android:background="#339EF0"
+    android:textColor="#FFFFFF"/>
+
+<Button 
+    android:id="@+id/zhucebuttonId"
+    android:layout_width="140dp"
+    android:layout_centerHorizontal="true"
+    android:layout_height="30dp"
+    android:textSize="15sp"
+    android:text="注册账号"
+    android:layout_marginTop="30dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="10dp"
+    android:background="#F5F5F5"
+    android:textColor="#339EF0"/>
+<TextView 
+    android:id="@+id/guanyuId"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="关于我们"
+    android:textSize="15sp"
+    android:layout_alignBottom="@id/zhucebuttonId"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    android:textColor="#339EF0"
+    android:clickable="true"
+    />"
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/xdengrubuttonId" 
+        android:layout_marginTop="30dp"
+        android:text="说明:因为所有注册账号均不能直接登入，需等管理员审核，所以需要有第一个默认的总管理员账号，来管理，  西电管理员账号:1密码:1 科大管理员账号:2密码:2 交大管理员账号:3密码:3，只有管理员同意后用户 才可以登入，每个管理员只能管理本学校的用户"/>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<Spinner 
+    android:id="@+id/managerseeSpinnerId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="10dp"
+    />
+<TextView 
+    android:id="@+id/refreshButtonId"
+    android:textSize="20sp"
+    android:layout_width="60dp"
+    android:layout_height="30dp"
+    android:text="刷新"
+    android:gravity="center"
+    android:background="#EBCAF2"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="20dp"
+    android:layout_below="@id/managerseeSpinnerId"
+    />
+<ListView 
+    	android:id="@+id/managerseeListViewId"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_alignParentBottom="true"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:layout_marginTop="50dp"
+    	android:layout_below="@id/managerseeSpinnerId"
+    	android:layout_marginBottom="50dp"
+    ></ListView>
+
+</RelativeLayout>

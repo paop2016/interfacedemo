@@ -1,0 +1,693 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#EDEDED">
+
+<ImageView 
+    android:id="@+id/imageId"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:src="@drawable/main"
+    android:scaleType="fitXY"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp"
+    />
+<LinearLayout 
+    android:id="@+id/xuexiaoId"
+    android:layout_below="@id/imageId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    >
+    <ImageView 
+        android:src="@drawable/xuexiao"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+	<Spinner 
+    	android:id="@+id/spinnerId"
+    	android:layout_width="match_parent"
+    	android:layout_height="40dp"
+    	android:layout_marginRight="20dp"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/quanxianId"
+    android:layout_below="@id/xuexiaoId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:visibility="gone"
+    >
+    <ImageView 
+        android:src="@drawable/d"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+	<Spinner 
+    	android:id="@+id/spinner1Id"
+    	android:layout_width="match_parent"
+    	android:layout_height="40dp"
+    	android:layout_marginRight="20dp"/>
+</LinearLayout>
+
+***************************************西电注册布局*********************************************
+<RelativeLayout
+    android:id="@+id/xidianlayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginTop="10dp"
+    android:layout_below="@id/quanxianId"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+        android:visibility="gone"
+    >
+<TextView 
+    android:id="@+id/flagId"
+    android:layout_width="0dp" 
+    android:layout_height="0dp"
+    android:layout_centerHorizontal="true"
+    
+    />
+<LinearLayout 
+    android:id="@+id/firstId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    >
+    <ImageView 
+        android:src="@drawable/a"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/zhanghaoId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="注册账号 (6-16位,以字母开头)"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/first1Id"
+    android:layout_below="@id/firstId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/xingming"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/xingmingzhuceId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="姓名(2-6个汉字)"
+        android:singleLine="true"/>
+</LinearLayout>
+
+    <LinearLayout 
+    android:id="@+id/xidianClassLayoutId"
+    android:layout_below="@id/first1Id"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_alignLeft="@id/flagId"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:id="@+id/xidianClassImageId"
+        android:src="@drawable/banji"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/banjiId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="您的班级(数字)"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/secondId"
+    android:layout_below="@id/first1Id"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_toLeftOf="@id/xidianClassLayoutId"
+    >
+    <ImageView 
+        android:id="@+id/xidianXuegongImageId"
+        android:src="@drawable/xuehao"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/xuehaoId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="输入您的学号(数字)"
+        android:singleLine="true"/>
+    </LinearLayout>
+<LinearLayout 
+    android:id="@+id/thirdId"
+    android:layout_below="@id/secondId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/c"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/shenfenId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="居民身份证号(18位)"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/forthId"
+    android:layout_below="@id/thirdId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/b"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/mimaId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="密码(6-12位 字母/数字/下划线)"
+        android:password="true"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/fifthId"
+    android:layout_below="@id/forthId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/b"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/querenmimaId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="确认密码"
+        android:password="true"
+        android:singleLine="true"/>
+</LinearLayout>
+<Button 
+    android:id="@+id/zhucebabuttonId"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:textSize="20sp"
+    android:text="注册吧"
+    android:layout_below="@id/fifthId"
+    android:layout_marginTop="20dp"
+    android:background="#339EF0"
+    android:textColor="#FFFFFF"/>
+
+    </RelativeLayout>
+***************************************科大注册布局*********************************************
+<RelativeLayout
+    android:id="@+id/kedalayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginTop="10dp"
+    android:layout_below="@id/quanxianId"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    >
+<TextView 
+    android:id="@+id/flag1Id"
+    android:layout_width="0dp" 
+    android:layout_height="0dp"
+    android:layout_centerHorizontal="true"
+    
+    />
+<LinearLayout 
+    android:id="@+id/kedafirstId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    >
+    <ImageView 
+        android:src="@drawable/a"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/kedazhanghaoId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="注册账号 (6-16位,以字母开头)"
+        android:singleLine="true"/>
+</LinearLayout>
+    <LinearLayout 
+        android:id="@+id/kedaMonitorLayoutId"
+    	android:layout_below="@id/kedafirstId"
+    	android:layout_height="40dp"
+    	android:layout_width="match_parent"
+    	android:layout_alignLeft="@id/flag1Id"
+    	android:layout_marginTop="10dp"
+        >
+    <ImageView 
+        android:id="@+id/kedaMonitorImageId"
+        android:src="@drawable/banzhang"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/kedaMonitorId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="班长认证号"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/kedafirst1Id"
+    android:layout_below="@id/kedafirstId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+	android:layout_toLeftOf="@id/kedaMonitorLayoutId"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/xingming"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/kedaxingmingzhuceId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="姓名"
+        android:singleLine="true"/>
+    </LinearLayout>
+    <LinearLayout 
+    android:id="@+id/kedaClassLayoutId"
+    android:layout_below="@id/kedafirst1Id"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_alignLeft="@id/flag1Id"
+    >
+    <ImageView 
+        android:id="@+id/kedaClassImageId"
+        android:src="@drawable/banji"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/kedabanjiId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="您的班级"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/kedasecondId"
+    android:layout_below="@id/kedafirst1Id"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_toLeftOf="@id/kedaClassLayoutId"
+    >
+    <ImageView 
+        android:id="@+id/kedaXuegongImageId"
+        android:src="@drawable/xuehao"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/kedaxuehaoId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="输入您的学号"
+        android:singleLine="true"/>
+    </LinearLayout>
+
+<LinearLayout 
+    android:id="@+id/kedathirdId"
+    android:layout_below="@id/kedasecondId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/c"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/kedashenfenId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="居民身份证号(18位)"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/kedaforthId"
+    android:layout_below="@id/kedathirdId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/b"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/kedamimaId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="密码(6-12位 字母/数字/下划线)"
+        android:password="true"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/kedafifthId"
+    android:layout_below="@id/kedaforthId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/b"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/kedaquerenmimaId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="确认密码"
+        android:password="true"
+        android:singleLine="true"/>
+</LinearLayout>
+<Button 
+    android:id="@+id/kedazhucebabuttonId"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:textSize="20sp"
+    android:text="注册吧"
+    android:layout_below="@id/kedafifthId"
+    android:layout_marginTop="20dp"
+    android:background="#339EF0"
+    android:textColor="#FFFFFF"/>
+    </RelativeLayout>    
+***************************************交大注册布局*********************************************
+<RelativeLayout
+    android:id="@+id/jiaodalayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginTop="10dp"
+    android:layout_below="@id/quanxianId"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+        android:visibility="gone"
+    >
+<TextView 
+    android:id="@+id/flag2Id"
+    android:layout_width="0dp" 
+    android:layout_height="0dp"
+    android:layout_centerHorizontal="true"
+    
+    />
+<LinearLayout 
+    android:id="@+id/jiaodafirstId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    >
+    <ImageView 
+        android:src="@drawable/a"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/jiaodazhanghaoId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="注册账号 (6-16位,以字母开头)"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/jiaodafirst1Id"
+    android:layout_below="@id/jiaodafirstId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/xingming"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/jiaodaxingmingzhuceId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="姓名"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout
+        android:id="@+id/jiaodaClassLayoutId"
+    	android:layout_below="@id/jiaodafirst1Id"
+    	android:layout_height="40dp"
+    	android:layout_width="match_parent"
+    	android:layout_alignLeft="@id/flag2Id"
+    	android:layout_marginTop="10dp"
+        >
+    <ImageView 
+        android:id="@+id/jiaodaClassImageId"
+        android:src="@drawable/banji"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/jiaodabanjiId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="您的班级"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/jiaodasecondId"
+    android:layout_below="@id/jiaodafirst1Id"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+	android:layout_toLeftOf="@id/jiaodaClassLayoutId"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:id="@+id/jiaodaXuegongImageId"
+        android:src="@drawable/xuehao"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/jiaodaxuehaoId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="输入您的学号"
+        android:singleLine="true"/>
+    </LinearLayout>
+<LinearLayout 
+    android:id="@+id/jiaodathirdId"
+    android:layout_below="@id/jiaodasecondId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/c"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/jiaodashenfenId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="居民身份证号(18位)"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/jiaodaforthId"
+    android:layout_below="@id/jiaodathirdId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/b"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/jiaodamimaId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="密码(6-12位 字母/数字/下划线)"
+        android:password="true"
+        android:singleLine="true"/>
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/jiaodafifthId"
+    android:layout_below="@id/jiaodaforthId"
+    android:layout_height="40dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView 
+        android:src="@drawable/b"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center"/>
+    <EditText 
+        android:id="@+id/jiaodaquerenmimaId"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="确认密码"
+        android:password="true"
+        android:singleLine="true"/>
+</LinearLayout>
+<Button 
+    android:id="@+id/jiaodazhucebabuttonId"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:textSize="20sp"
+    android:text="注册吧"
+    android:layout_below="@id/jiaodafifthId"
+    android:layout_marginTop="20dp"
+    android:background="#339EF0"
+    android:textColor="#FFFFFF"/>
+    </RelativeLayout>    
+ 
+
+</RelativeLayout>
